@@ -1,0 +1,36 @@
+{
+  "name": "triagedesk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Semantic case retrieval system for health helplines (DBMS Level 3 mini project)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:reset": "tsx scripts/migrate.ts && tsx scripts/seed.ts",
+    "db:reembed": "tsx scripts/reembed.ts"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "3.8.1",
+    "bcryptjs": "3.0.2",
+    "jose": "6.1.0",
+    "next": "15.5.26",
+    "pg": "8.16.3",
+    "react": "19.1.9",
+    "react-dom": "19.1.9",
+    "server-only": "^0.0.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.18.0",
+    "@types/pg": "8.15.5",
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
+    "dotenv": "17.2.2",
+    "tsx": "4.20.5",
+    "typescript": "5.9.3"
+  }
+}

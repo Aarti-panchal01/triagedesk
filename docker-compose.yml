@@ -1,0 +1,14 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: triagedesk-db
+    environment:
+      POSTGRES_USER: triagedesk
+      POSTGRES_PASSWORD: triagedesk
+      POSTGRES_DB: triagedesk
+    ports:
+      - "5433:5432"
+    volumes:
+      - triagedesk-data:/var/lib/postgresql/data
+volumes:
+  triagedesk-data:
