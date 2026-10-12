@@ -14,7 +14,7 @@ DBMS Experiential Learning, Level 3 mini project (PES University, Semester 5).
 
 ## Screenshots
 
-**New call.** As the agent types, matching protocols and similar resolved cases update on the right, ranked by cosine similarity.
+**New call.** As the agent types, matching protocols and similar resolved cases update on the right, ranked by cosine similarity. The match column stays pinned beside the form and scrolls on its own.
 
 ![New call with live matches](docs/screenshots/new-call.png)
 
