@@ -216,7 +216,7 @@ export function NewCaseForm({ symptoms, districts }: { symptoms: Symptom[]; dist
         </div>
       </div>
 
-      <aside className="stack">
+      <aside className="stack side-scroll">
         <section className="panel" aria-live="polite">
           <div className="panel-head"><h2>Matching protocols</h2>{matching && <span className="hint">Searching</span>}</div>
           {!matches ? (
@@ -224,7 +224,8 @@ export function NewCaseForm({ symptoms, districts }: { symptoms: Symptom[]; dist
           ) : matches.protocols.length === 0 ? (
             <div className="empty">No protocol is close enough. Use clinical judgement and consider escalating.</div>
           ) : (
-            matches.protocols.map((p) => (
+            // Three protocols are enough while on a call; the Search page shows the full list.
+            matches.protocols.slice(0, 3).map((p) => (
               <div className="match" key={p.protocol_id}>
                 <div className="match-top">
                   <strong className="what">{p.code}: {p.title}</strong>
